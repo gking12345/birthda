@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Page Website</title>
+    <link rel="stylesheet" href="puzzle css.css">
+</head>
+<body>
+    <div class="page" id="cover">
+        <h1>Notebook Cover</h1>
+        <div class="notebook-cover">Notebook</div>
+        <img src="images/notebook_cover.jpg" alt="Notebook Cover" class="clickable-img" onclick="showPage('game')">
+    </div>
+    <div class="page" id="game">
+        <h1>Sliding Puzzle Game</h1>
+        <div class="puzzle-container" id="puzzle-container"></div>
+        <button class="nav-button" onclick="showPage('bts')">Go to BTS Birthday</button>
+        <button class="nav-button" onclick="goBack()">Back</button>
+    </div>
+    <div class="page" id="bts">
+        <h1>Happy Birthday</h1>
+        <img src="nn.jpg" alt="BTS Collage" class="bts-collage">
+        <h2>Happy Birthday!</h2>
+        <button class="nav-button" onclick="showPage('cover')">Go to Notebook Cover</button>
+        <button class="nav-button" onclick="goBack()">Back</button>
+    </div>
+    
+    <!-- Background Music -->
+    <audio id="background-audio" loop autoplay>
+        <source src="Bruno Major.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="pauseButton">Pause Music</button>
+    <button id="playButton">Play Music</button>
+
+    <script src="puzzle.js"></script>
+</body>
+</html>
